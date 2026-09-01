@@ -17,16 +17,16 @@ from PyQt6.QtWidgets import (
 from automata import Cajero
 
 # ---------------------------------------------------------------------------
-# GENERADOR DE DIAGRAMA AFD (MATPLOTLIB)
+# Paleta pastel
 # ---------------------------------------------------------------------------
-COLOR_FONDO = "#FBF7F0"
-COLOR_INICIAL = "#AEDFF7"
-COLOR_PROCESO = "#BFE8C0"
-COLOR_FINAL = "#FFCB9A"
-COLOR_DECISION = "#FFF3B0"
-COLOR_OPERACION = "#D9C6F0"
-COLOR_BORDE = "#6B6B6B"
-COLOR_ACTIVO = "#22C7D6"
+COLOR_FONDO = "#FBF7F0"       # fondo pastel general
+COLOR_INICIAL = "#AEDFF7"     # azul pastel - estado inicial
+COLOR_PROCESO = "#BFE8C0"     # verde pastel - estados de proceso
+COLOR_FINAL = "#FFCB9A"       # naranja pastel - estados finales
+COLOR_DECISION = "#FFF3B0"    # amarillo pastel - rombos de condición
+COLOR_OPERACION = "#D9C6F0"   # morado pastel - paralelogramos (operación realizada)
+COLOR_BORDE = "#6B6B6B"       # borde neutro
+COLOR_ACTIVO = "#22C7D6"      # turquesa - resaltado de estado/transición activa
 COLOR_TEXTO = "#333333"
 COLOR_FLECHA = "#8A8A8A"
 COLOR_FLECHA_LABEL_BG = "#FFFFFF"
@@ -44,6 +44,8 @@ FRIENDLY = {
     "FIN": "FINALIZADO",
 }
 
+# Tipo de figura para cada nodo real / visual
+# circle_start, circle_final, rect, parallelogram, diamond
 TIPO_NODO = {
     "Q0": "circle_start",
     "Q1": "rect",
@@ -68,6 +70,7 @@ ETIQUETA_DECISION = {
     "D4": "¿Saldo\nsuficiente?",
 }
 
+# Posiciones (x, y) de cada nodo en el lienzo
 POS = {
     "Q0": (4.5, 18.0),
     "Q1": (4.5, 15.7),
